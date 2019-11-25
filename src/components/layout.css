@@ -1,0 +1,8 @@
+@import '../dist/css/theme.css';
+@import '../dist/vendor/bootstrap/dist/css/bootstrap.min.css';
+@import '../dist/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css';
+@import '../dist/vendor/@fortawesome/fontawesome-free/css/all.min.css';
+@import '../dist/vendor/aos/dist/aos.css';
+
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700';
