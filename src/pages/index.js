@@ -7,12 +7,13 @@ import * as S from "../components/indexSections"
 
 const IndexPage = () => (
   <Layout>
+
     <SEO title="Home" />
-    {/* <div class="preloader">
-      <div class="spinner">
-          <div class="circles"></div>
+     <div className="preloader">
+      <div className="spinner">
+          <div className="circles"></div>
       </div>
-    </div> */}
+    </div> 
     <main className="main minh-100vh">
               <S.SectionA />
 

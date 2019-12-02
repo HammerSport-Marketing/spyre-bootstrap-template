@@ -3,5 +3,14 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
+ import React from "react";
+import { withPrefix} from "gatsby"
+import Helmet from "react-helmet"
+const jquery = require('../dist/vendor/jquery/dist/jquery.min.js');
 
-// You can delete this file if you're not using it
+export function onRenderBody(
+    {setPostBodyComponents}
+){
+  setPostBodyComponents([
+      ]);
+}

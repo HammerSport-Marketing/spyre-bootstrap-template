@@ -7,8 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import { withPrefix, useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
@@ -23,12 +23,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  // const jquery = require('../dist/vendor/jquery/dist/jquery.min.js')
-  // const popper_script = require('../dist/vendor/popper.js/dist/umd/popper.min.js')
-  // const bootstrap = require('../dist/vendor/bootstrap/dist/js/bootstrap.min.js')
-  // const rellax_script = require('../dist/vendor/rellax/rellax.min.js')
-  // const aos_script = require('../dist/vendor/aos/dist/aos.js')
-  // const theme_script = require('../dist/js/theme.min.js')
+
   return (
     
     <>
@@ -37,6 +32,15 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       <Footer />
       </div>
+      {/* SCRIPTS */}
+      <Helmet>
+        <script src={withPrefix('./dist/vendor/jquery/dist/jquery.min.js')} type="text/javascript"/>
+        <script src={withPrefix('./dist/vendor/popper.js/dist/umd/popper.min.js')} type="text/javascript"/>
+        <script src={withPrefix('./dist/vendor/bootstrap/dist/js/bootstrap.min.js')} type="text/javascript"/>
+        <script src={withPrefix('./dist/vendor/rellax/rellax.min.js')} type="text/javascript"/>
+        <script src={withPrefix('./dist/vendor/aos/dist/aos.js')} type="text/javascript"/>
+        <script src={withPrefix('./dist/js/theme.min.js')} type="text/javascript"/>
+      </Helmet>
     </>
   )
 }
